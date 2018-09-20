@@ -1,7 +1,56 @@
-$blueColor : #2196F3;
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: $blueColor;
+$primaryColor : #2196F3;
+$secondaryColor: #e54b03;
+$colors: (
+  sexy: #FA6ACC,
+  glamour: #F02A52,
+  sky: #09A6E4,
+  save:#039be5
+);
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (min-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "medium" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "large" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
 }
+
+.p {
+  background-color: map-get($colors,sky);
+}
+.theme {
+  width: 100%;
+  flex-grow: 1;
+}
+
+
+@include respond-to(medium) {
+  background-color:  $primaryColor;
+ }
+ @include respond-to(large) {
+  background-color:  $secondaryColor;;
+ }
+ @include respond-to(small) {
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color:  map-get($colors,sky);
+      }
+  }
