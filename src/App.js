@@ -5,12 +5,12 @@ class App extends Component {
   render() {
     return (
       <div className="grid">
-        <div><span> News </span> <span>News </span></div>
+        <div><span> Home </span> <span> News </span></div>
         <div class="media">
           <h2>Flexbox</h2>
           <div class="wrapper flex ">
             <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-             New Range of  coming  soon Style </span>
+            <p>New Range of  coming out soon Style</p>  </span>
             </div>
 
             <div ><img src="http://fakeimg.pl/240x240/666/?text=7"></img>

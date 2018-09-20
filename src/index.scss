@@ -1,4 +1,4 @@
-$warning: #F02A52;
+$warning: #8daab9;
 $colors: (
   prima : #2196F3,
   second: #039be5,
@@ -65,11 +65,16 @@ span {
   margin: 10px;
 }
 
-.photos img {
+.photos {
   display: flex;
   justify-content: center;
   background-color: #fff;
+
 }
+img {
+  padding-left: 12%;
+}
+
 
 h1 {
   font-sizes: map-get($fontSizes, lg);
@@ -78,7 +83,7 @@ h1 {
 @media (min-width: 66em) {
   p {
     font-sizes: map-get($fontSizes, lg);
-    background-color: map-get($colors, prima);
+    background-color: map-get($colors, second);
     margin: 0 0 .8em 0;
   }
 }
@@ -86,13 +91,13 @@ h1 {
   p {
     font-sizes: map-get($fontSizes, md);
     background-color: $warning;
-    margin: 0 0 .5em 0;
+    margin: 0 0 0 0;
   }
 }
 @media (min-width: 40em) {
   p {
     font-sizes: map-get($fontSizes, sm);
-    background-color: map-get($colors, sky);
+
     margin: 0 0 .3em 0;
   }
 }
