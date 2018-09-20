@@ -1,10 +1,9 @@
 $primaryColor : #2196F3;
-$secondaryColor: #e54b03;
+$secondaryColor: #039be5;
 $colors: (
   sexy: #FA6ACC,
   glamour: #F02A52,
   sky: #09A6E4,
-  save:#039be5
 );
 
 @mixin respond-to($breakpoint) {
@@ -40,7 +39,7 @@ $colors: (
   background-color:  $primaryColor;
  }
  @include respond-to(large) {
-  background-color:  $secondaryColor;;
+  background-color:  map-get($colors,sexy);
  }
  @include respond-to(small) {
   body {
