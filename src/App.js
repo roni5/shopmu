@@ -10,27 +10,32 @@ class App extends Component {
           <h2>Flexbox</h2>
           <div class="wrapper flex ">
             <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p>New Range of  coming out soon Style</p>  </span>
+            <p>New Range out soon </p> </span>
             </div>
-
-            <div ><img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p> New in p </p> </div>
-            <div><img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p> New Style </p> </div>
-            <div><img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p> New Style </p> </div>
-            <div><img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p> New Style </p> </div>
-            <div><img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p> New Style </p> </div>
-            <div><img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p> New Style </p> </div>
-            <div><img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p> New Style </p> </div>
-            <div><img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p> New Style </p> </div>
-            <div><img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p> New Style </p> </div>
+            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
+            <p>New Range  out soon </p> </span>
+            </div>
+            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
+            <p>New Range  out soon</p> </span>
+            </div>
+            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
+            <p>New Range  out soon</p> </span>
+            </div>
+            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
+            <p>New Range  out soon</p> </span>
+            </div>
+            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
+            <p>New Range  out soon</p> </span>
+            </div>
+            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
+            <p>New Range  out soon</p> </span>
+            </div>
+            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
+            <p>New Range of  coming out soon </p> </span>
+            </div>
+            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
+            <p>New Range of  coming out soon </p> </span>
+            </div>
           </div>
         </div>
       </div>
