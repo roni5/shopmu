@@ -1,5 +1,4 @@
 
-$body-bg: #f3f3f0;
 @import 'custom_bootstrap';
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
@@ -7,6 +6,8 @@ $body-bg: #f3f3f0;
 @import "~bootstrap/scss/_functions.scss";
 @import "~bootstrap/scss/variables";
 $warning: #8daab9;
+
+body{color: $body-bg;}
 $colors: (
   prima : #2196F3,
   second: #039be5,
@@ -56,7 +57,7 @@ span {
 .wrapper > div {
   display: flex;
   justify-content: center;
-  background-color: rgb(89,161,175);
+  background-color: map-get($colors, prima);
   border-radius: 5px;
   padding: 10px;
   color: #fff;

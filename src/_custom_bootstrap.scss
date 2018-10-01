@@ -1,7 +1,10 @@
+
 $new-color:   #00FFC4 ;
 $primary:       $new-color;
 $brand-primary: $new-color;
-
+$body-bg: #fffffe;
 $theme-colors: (
   primary: $new-color
 ) !default;
+
+body{color: $body-bg;}
