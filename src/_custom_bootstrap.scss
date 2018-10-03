@@ -1,10 +1,23 @@
 
+//$color-primary-4: #31FFD1;
 $new-color:   #00FFC4 ;
-$primary:       $new-color;
+$primary:     $new-color;
+$secondary: #00BE93;
+$success:  #00FFC6;
 $brand-primary: $new-color;
-$body-bg: #fffffe;
+$brand-secondary: $secondary;
+$brand-secondary: $success;
 $theme-colors: (
   primary: $new-color
 ) !default;
 
+$theme-colors: (
+  secondary: $secondary
+) !default;
+
+$theme-colors: (
+  success: $success
+) !default;
+
+$body-bg: #fffffe;
 body{color: $body-bg;}

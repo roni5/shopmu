@@ -97,7 +97,6 @@ html {
   font-size: 1rem;
 }
 body {
-  color: $body-bg;
   overflow: auto;
   line-height: 1;
   overflow-y: scroll;
@@ -114,16 +113,16 @@ a {
   text-decoration: none;
 }
 .feature {
-  color: map-get($colors, prima);
+  color: $new-color;
   &:hover {
-    color:$active;
+    color:$secondary;
     text-decoration: none;
   }
   &:active {
-    color:$active;
+    color:$success;
   }
   &.style-class {
-    color: #00CEFF;
+    color: $new-color;
     &:hover {
       color: map-get($colors, second);
     }
@@ -137,14 +136,14 @@ span {
   align-items: center;
   justify-content: center;
   color: map-get($colors, prima);
-  border: solid 1px map-get($colors, sky);
+  border: solid 1px $success;
 }
 
 
 * { box-sizing: border-box; }
 
 .wrapper {
-  border: 5px solid $active;
+  border: 3px solid $secondary;
   border-radius: 3px;
   margin-bottom: 1.5em;
 }
@@ -162,7 +161,7 @@ span {
 .wrapper > div {
   display: flex;
   justify-content: center;
-  background-color: map-get($colors, prima);
+  background-color: map-get($colors, second);
   border-radius: 5px;
   padding: 10px;
   color: #fff;

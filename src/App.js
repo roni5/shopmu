@@ -14,12 +14,12 @@ class App extends Component {
         <button type="button" class="btn btn-primary">Primary</button>
         <button type="button" class="btn btn-primary btn-sm">Small button</button>
         <button type="button" class="btn btn-secondary btn-sm">Small button</button>
-        <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+        <div class="p-3 mb-2 bg-success text-white"> bg-success</div>
         <div class="media">
           <div id="scrollUp" class='float-lg-right'></div>
         <h2>Flexbox</h2>
 
-          <div class="wrapper flex img-fluid">
+          <div class="wrapper flex bg-primary img-fluid">
             <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7" alt='products'  ></img>
             <p>New Range out soon </p> </span>
             </div>
