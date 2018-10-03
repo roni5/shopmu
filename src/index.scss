@@ -124,7 +124,7 @@ a {
   &.style-class {
     color: $new-color;
     &:hover {
-      color: map-get($colors, second);
+      color: $success;
     }
     &:active {
       color: $active;
@@ -135,10 +135,8 @@ span {
   border-radius: 3px;
   align-items: center;
   justify-content: center;
-  color: map-get($colors, prima);
-  border: solid 1px $success;
+  border: solid 1px $secondary;
 }
-
 
 * { box-sizing: border-box; }
 
@@ -161,7 +159,7 @@ span {
 .wrapper > div {
   display: flex;
   justify-content: center;
-  background-color: map-get($colors, second);
+  background-color: $success;
   border-radius: 5px;
   padding: 10px;
   color: #fff;

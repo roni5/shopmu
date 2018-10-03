@@ -3,7 +3,7 @@
 $new-color:   #00FFC4 ;
 $primary:     $new-color;
 $secondary: #00BE93;
-$success:  #00FFC6;
+$success:  rgba(11, 199, 158, 0.568);
 $brand-primary: $new-color;
 $brand-secondary: $secondary;
 $brand-secondary: $success;
@@ -15,9 +15,7 @@ $theme-colors: (
   secondary: $secondary
 ) !default;
 
-$theme-colors: (
-  success: $success
-) !default;
+
 
 $body-bg: #fffffe;
 body{color: $body-bg;}
