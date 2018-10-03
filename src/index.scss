@@ -5,27 +5,99 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/_functions.scss";
 @import "~bootstrap/scss/variables";
-$warning: #8daab9;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
-body{color: $body-bg;}
+$active:rgb(241, 14, 90);
 $colors: (
   prima : #2196F3,
   second: #039be5,
   sky: #09A6E4,
 );
-$fontSizes: (
-  sm: 0.8em,
-  md: 1.1em,
-  lg: 1.8em
+$fontSize: (
+  sm: 0.7 em,
+  md: 1.0 em,
+  lg: 1.5 em
 );
 html {
   font: 1.1em/1.4 Helvetica, sans-serif;
+}
+body {
+  color: $body-bg;
+  overflow: auto;
+  line-height: 1;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 ul > li {
   display:inline;
   border-radius: 3px;
   background-color: $pink;
   border-bottom-style: solid 9px
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+.feature {
+  color: #2196F3;
+  &:hover {
+    color: map-get($colors, prima);
+    text-decoration: none;
+  }
+  &:active {
+    color:$active;
+  }
+  &.style-class {
+    color: #00CEFF;
+    &:hover {
+      color: #0090B2;
+    }
+    &:active {
+      color: $active;
+    }
+  }
 }
 span {
   border-radius: 3px;
@@ -39,7 +111,7 @@ span {
 * { box-sizing: border-box; }
 
 .wrapper {
-  border: 5px solid rgb(86,98,110);
+  border: 5px solid $active;
   border-radius: 3px;
   margin-bottom: 1.5em;
 }
@@ -78,6 +150,7 @@ span {
   display: flex;
   justify-content: center;
   background-color: #fff;
+ box-shadow: 0px 3px 4px -1px rgba(0, 0, 0, 0.5);
 
 }
 img {
@@ -86,27 +159,28 @@ img {
 
 
 h1 {
-  font-sizes: map-get($fontSizes, lg);
+  font-size: map-get($fontSize, lg);
   background-color: map-get($colors, prima);
 }
 @media (min-width: 66em) {
   p {
-    font-sizes: map-get($fontSizes, lg);
-    background-color: map-get($colors, second);
+    font-size: map-get($fontSize, md);
+    background-color: map-get($colors, sky);;
     margin: 0 0 .8em 0;
   }
 }
-@media (min-width: 50em) {
+@media (min-width: 15em) {
   p {
-    font-sizes: map-get($fontSizes, md);
-    background-color: $warning;
+    color: map-get($colors,second);
+    font-size: map-get($fontSize, md);
     margin: 0 0 0 0;
   }
 }
-@media (min-width: 40em) {
+@media (min-width: 41em) {
   p {
-    font-sizes: map-get($fontSizes, sm);
-
+    font-size: map-get($fontSize, sm);
+    color: $active;
+    //color: map-get($colors, prima);
     margin: 0 0 .3em 0;
   }
 }
