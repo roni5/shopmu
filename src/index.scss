@@ -52,16 +52,49 @@ table {
 $active:rgb(241, 14, 90);
 $colors: (
   prima : #2196F3,
-  second: #039be5,
+  second: #414f57,
   sky: #09A6E4,
 );
+
+/**
 $fontSize: (
   sm: 0.7 em,
   md: 1.0 em,
   lg: 1.5 em
 );
+*/
+/// @site https://madebymike.com.au/writing/precise-control-responsive-typography/
+
+
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
+
+  font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+
+  @media screen and (max-width: $lower-range) {
+    font-size: $min-font-size;
+  }
+  @media screen and (min-width: $upper-range){
+    font-size: $max-font-size;
+  }
+}
+
+
 html {
   font: 1.1em/1.4 Helvetica, sans-serif;
+}
+
+html {
+  font-size: 16px;
+  // Magic:
+  @media (max-width: 1000px) {
+    font-size: calc(12px + .4vw);
+  }
+}
+.title {
+  font-size: 1.5rem;
+}
+.body {
+  font-size: 1rem;
 }
 body {
   color: $body-bg;
@@ -81,9 +114,9 @@ a {
   text-decoration: none;
 }
 .feature {
-  color: #2196F3;
+  color: map-get($colors, prima);
   &:hover {
-    color: map-get($colors, prima);
+    color:$active;
     text-decoration: none;
   }
   &:active {
@@ -92,7 +125,7 @@ a {
   &.style-class {
     color: #00CEFF;
     &:hover {
-      color: #0090B2;
+      color: map-get($colors, second);
     }
     &:active {
       color: $active;
@@ -150,7 +183,7 @@ span {
   display: flex;
   justify-content: center;
   background-color: #fff;
- box-shadow: 0px 3px 4px -1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 4px -1px rgba(0, 0, 0, 0.5);
 
 }
 img {
@@ -158,10 +191,26 @@ img {
 }
 
 
-h1 {
-  font-size: map-get($fontSize, lg);
-  background-color: map-get($colors, prima);
+p {
+  @include fluid-type(14px, 20px);
+  font-weight: normal
 }
+
+h1 {
+  @include fluid-type(28px, 52px);
+  font-weight: 100;
+}
+h1 {
+
+  background-color: map-get($colors, second);
+}
+#scrollUp {
+  scroll-behavior: smooth;
+  transition: background .2s ease;
+  text-align: center;
+  float:right;
+}
+/**
 @media (min-width: 66em) {
   p {
     font-size: map-get($fontSize, md);
@@ -169,6 +218,8 @@ h1 {
     margin: 0 0 .8em 0;
   }
 }
+*/
+/**
 @media (min-width: 15em) {
   p {
     color: map-get($colors,second);
@@ -184,5 +235,6 @@ h1 {
     margin: 0 0 .3em 0;
   }
 }
+*/
 
 
