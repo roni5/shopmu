@@ -11,19 +11,17 @@ class App extends Component {
   render() {
     return (
       <div className="grid">
-        <Header className="header" >
-        
+        <Header class="container" >
+          <p class="text-primary"> Hello World</p>
+
           </Header>
         <div><span> <a className="feature" href="#news">Go to News</a></span> <span><a class="feature" href="#cv">Go to CV</a></span>
 
         </div>
 
-        <button type="button" class="btn btn-primary btn-sm">Primary</button>
 
-        <Search/>
-        <button type="button" class="btn btn-success btn-sm">Success button</button>
         <div class="p-3 mb-2 bg-white text-white">
-          bg-success
+
           </div>
         <div class="media">
           <div id="scrollUp" ></div>

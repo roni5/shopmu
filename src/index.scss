@@ -51,9 +51,9 @@ table {
 
 $active:rgb(241, 14, 90);
 $colors: (
-  prima : #2196F3,
+  prima : #00745A,
   second: #0b661f,
-  sky: #09A6E4,
+  dark:    #4FCFB2,
 );
 
 /**
@@ -105,7 +105,7 @@ body {
 ul > li {
   display:inline;
   border-radius: 3px;
-  background-color: $pink;
+  background-color: $active;
   border-bottom-style: solid 9px
 }
 a {
@@ -114,7 +114,7 @@ a {
 }
 /* Internal links, beginning with "#" */
 a[href^="#"] {
-  background-color: map-get($colors, second);
+  background-color: $success;
 }
 .feature {
   color: $new-color;
@@ -139,7 +139,7 @@ span {
   border-radius: 3px;
   align-items: center;
   justify-content: center;
-  border: solid 1px $secondary;
+
 }
 
 * { box-sizing: border-box; }
@@ -194,6 +194,12 @@ span {
 }
 img {
   padding-left: 12%;
+}
+#brand{
+  border-radius: 5px;
+  border: 3px solid map-get($colors, prima);
+  padding: .8%;
+  box-shadow: 0px 3px 4px -1px rgba(0, 0, 0, 0.5);
 }
 #button {
   content: "";
@@ -272,25 +278,17 @@ h1 {
   overflow: hidden;
 }
 
-.content header .input-group #q {
+.header .input-group #q {
   border: 0;
-  height: 100%;
+  height: 60%;
 }
 
 .header .input-group #q:focus {
   outline: none;
-  box-shadow: inset 0 0 0 1px #FFBE61;
+  box-shadow: inset 0 0 0 1px $secondary;
 }
 
-.header .input-group .form-control {
-  border: 0;
-  height: 100%;
-}
 
-.content header .input-group .form-control:focus {
-  outline: none;
-  box-shadow: inset 0 0 0 1px #FFBE61;
-}
 
 .content header .input-group .input-group-btn button {
   height: 100%;
