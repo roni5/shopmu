@@ -1,22 +1,32 @@
 import React, { Component } from 'react';
 
-import Button from './components/Both';
+import Search from './components/Search';
 import './App.css';
 import './index.scss';
 import Both from './components/Both';
+import Header from './components/header';
 
 class App extends Component {
 
   render() {
     return (
       <div className="grid">
-        <div><span> <a className="feature" href="#news">Go to News</a></span> <span><a class="feature"  href="#cv">Go to CV</a></span></div>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-primary btn-sm">Small button</button>
-        <button type="button" class="btn btn-secondary btn-sm">Small button</button>
-        <div class="p-3 mb-2 bg-success text-white"> bg-success</div>
+        <Header className="header" >
+        
+          </Header>
+        <div><span> <a className="feature" href="#news">Go to News</a></span> <span><a class="feature" href="#cv">Go to CV</a></span>
+
+        </div>
+
+        <button type="button" class="btn btn-primary btn-sm">Primary</button>
+
+        <Search/>
+        <button type="button" class="btn btn-success btn-sm">Success button</button>
+        <div class="p-3 mb-2 bg-white text-white">
+          bg-success
+          </div>
         <div class="media">
-          <div id="scrollUp" class='float-lg-right'></div>
+          <div id="scrollUp" ></div>
         <h2>Flexbox</h2>
 
           <div class="wrapper flex bg-primary img-fluid">
@@ -64,7 +74,7 @@ class App extends Component {
             </div>
           </scroll-page>
         </scroll-container>
-        <a id="scrollUp"  class="btn btn-secondary btn-sm " href="#top" style={{position: 'fixed' , zIndex: 20 , display: 'block'}}>Scroll to top</a>
+
       </div>
     );
   }
