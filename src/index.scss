@@ -1,23 +1,90 @@
-
-@import 'custom_bootstrap';
+@import "custom_bootstrap";
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/_functions.scss";
 @import "~bootstrap/scss/variables";
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,22 +93,35 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 // HTML5 display-role reset for older browsers
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
 }
 table {
@@ -49,11 +129,11 @@ table {
   border-spacing: 0;
 }
 
-$active:rgb(241, 14, 90);
+$active: rgb(241, 14, 90);
 $colors: (
-  prima : #00745A,
+  prima: #00745a,
   second: #0b661f,
-  dark:    #4FCFB2,
+  dark: #4fcfb2
 );
 
 /**
@@ -65,19 +145,29 @@ $fontSize: (
 */
 /// @site https://madebymike.com.au/writing/precise-control-responsive-typography/
 
-
-@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 420px, $upper-range: 900px) {
-
-  font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+@mixin fluid-type(
+  $min-font-size: 12px,
+  $max-font-size: 21px,
+  $lower-range: 420px,
+  $upper-range: 900px
+) {
+  font-size: calc(
+    #{$min-font-size} + #{(
+        ($max-font-size / ($max-font-size * 0 + 1)) -
+          ($min-font-size / ($min-font-size * 0 + 1))
+      )} * ((100vw - #{$lower-range}) / #{(
+            ($upper-range / ($upper-range * 0 + 1)) -
+              ($lower-range / ($lower-range * 0 + 1))
+          )})
+  );
 
   @media screen and (max-width: $lower-range) {
     font-size: $min-font-size;
   }
-  @media screen and (min-width: $upper-range){
+  @media screen and (min-width: $upper-range) {
     font-size: $max-font-size;
   }
 }
-
 
 html {
   font: 1.1em/1.4 Helvetica, sans-serif;
@@ -87,7 +177,7 @@ html {
   font-size: 16px;
   // Magic:
   @media (max-width: 1000px) {
-    font-size: calc(12px + .4vw);
+    font-size: calc(12px + 0.4vw);
   }
 }
 .title {
@@ -102,15 +192,34 @@ body {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
-ul > li {
-  display:inline;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   border-radius: 3px;
-  background-color: $active;
-  border-bottom-style: solid 9px
+  //background-color: $secondary;
+  border-bottom-style: solid 1px;
 }
+     li {
+      display: inline-block;
+      border: 1px solid $secondary;
+      &:hover {
+        color: $secondary;
+        text-decoration: none;
+      }
+      &:active {
+        color: $success;
+      }
+    }
+
 a {
-  display: inline-block;
+  display: flex;
+  padding: 0.5em 1em;
   text-decoration: none;
+  text-decoration: none;
+  &:active {
+    color: $secondary;
+  }
 }
 /* Internal links, beginning with "#" */
 a[href^="#"] {
@@ -119,11 +228,11 @@ a[href^="#"] {
 .feature {
   color: $new-color;
   &:hover {
-    color:$secondary;
+    color: $secondary;
     text-decoration: none;
   }
   &:active {
-    color:$success;
+    color: $success;
   }
   &.style-class {
     color: $new-color;
@@ -139,10 +248,11 @@ span {
   border-radius: 3px;
   align-items: center;
   justify-content: center;
-
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 1px solid $secondary;
@@ -160,7 +270,7 @@ span {
   display: grid;
   grid-gap: 1em;
   grid-template-columns: 1fr;
-  border: 1px solid ;
+  border: 1px solid;
   border-radius: 3px;
   padding: 10px;
 }
@@ -176,7 +286,7 @@ span {
 }
 
 .flex {
-   display: flex;
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -190,15 +300,14 @@ span {
   justify-content: center;
   background-color: $body-bg;
   box-shadow: 0px 3px 4px -1px rgba(0, 0, 0, 0.5);
-
 }
 img {
   padding-left: 12%;
 }
-#brand{
+#brand {
   border-radius: 5px;
-  border: 3px solid map-get($colors, prima);
-  padding: .8%;
+  border: 2px solid map-get($colors, prima);
+  padding: 0.8%;
   box-shadow: 0px 3px 4px -1px rgba(0, 0, 0, 0.5);
 }
 #button {
@@ -217,7 +326,7 @@ img {
 
 p {
   @include fluid-type(14px, 20px);
-  font-weight: normal
+  font-weight: normal;
 }
 
 h1 {
@@ -225,14 +334,17 @@ h1 {
   font-weight: 100;
 }
 h1 {
-
+  color: $primary;
+  background-color: $success;
+}
+h2 {
   background-color: map-get($colors, second);
 }
 #scrollUp {
   scroll-behavior: smooth;
-  transition: background .2s ease;
+  transition: background 0.2s ease;
   text-align: center;
-  float:right;
+  float: right;
 }
 
 .content .transparent {
@@ -250,7 +362,7 @@ h1 {
   width: 100%;
   height: 60px;
   padding: 10px;
-  background: #222F3F;
+  background: #222f3f;
 }
 
 .header .is-logo {
@@ -263,7 +375,7 @@ h1 {
   margin-right: 16px;
   font-size: 30px;
   font-weight: bold;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .header .logo:hover {
@@ -288,19 +400,17 @@ h1 {
   box-shadow: inset 0 0 0 1px $secondary;
 }
 
-
-
 .content header .input-group .input-group-btn button {
   height: 100%;
   padding: 0 30px;
   border: 0;
-  background: #FFBE61;
+  background: #ffbe61;
 }
 
 .content header .input-group .input-group-btn {
   height: 100%;
   border: 0;
-  background: #FFBE61;
+  background: #ffbe61;
 }
 /**
 @media (min-width: 66em) {
@@ -328,5 +438,3 @@ h1 {
   }
 }
 */
-
-
