@@ -34,33 +34,33 @@ class App extends Component {
 
           <div className="media">
             <div id="scrollUp" ></div>
-               <div className="wrapper flex bg-primary img-fluid">
-            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7" alt='products'  ></img>
+               <div className="wrapper flex bg-white img-fluid">
+            <div><span> <img src="https://unsplash.it/240/240?image=440" alt='products'  ></img>
+            <p>New Range out soon </p> </span>
+            </div>
+            <div><span> <img src="https://unsplash.it/240/240?image=61"></img>
+            <p className="text-primary">New Range  out soon </p> </span>
+            </div>
+            <div><span> <img src="https://unsplash.it/240/240?image=409"></img>
+            <p className="text-secondary">New Range  out soon</p> </span>
+            </div>
+            <div><span> <img src="https://unsplash.it/240/240?image=640"></img>
+            <p>New Range  out soon</p> </span>
+            </div>
+            <div><span> <img src="https://unsplash.it/240/240?random"></img>
+            <p>New Range  out soon</p> </span>
+            </div>
+            <div><span> <img src="https://unsplash.it/240/240?image=44"></img>
+            <p>New Range  out soon</p> </span>
+            </div>
+            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
+            <p>New Range  out soon</p> </span>
+            </div>
+            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
             <p>New Range out soon </p> </span>
             </div>
             <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p className="text-primary">New Range  out soon </p> </span>
-            </div>
-            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p className="text-secondary">New Range  out soon</p> </span>
-            </div>
-            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p>New Range  out soon</p> </span>
-            </div>
-            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p>New Range  out soon</p> </span>
-            </div>
-            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p>New Range  out soon</p> </span>
-            </div>
-            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p>New Range  out soon</p> </span>
-            </div>
-            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p>New Range of  coming out soon </p> </span>
-            </div>
-            <div><span> <img src="http://fakeimg.pl/240x240/666/?text=7"></img>
-            <p>New Range of  coming out soon </p> </span>
+            <p>New Range out soon </p> </span>
             </div>
           </div>
         </div>
