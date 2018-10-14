@@ -2,7 +2,7 @@
   "homepage": "https://roni5.github.io/shopmu/",
   "name": "shopmu",
   "version": "0.1.0",
-  "private": true,
+  "public": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
