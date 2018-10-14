@@ -35,13 +35,14 @@ return (
       name="searchTxt"
       autoComplete="off"
       id="searchTxt"
+      placeholder="jon"
       onChange={this.inputHandler.bind(this)} />
     <span className="input-group-btn">
   <button className="btn btn-primary btn-sm">
     <i className="fa fa-search" />
   </button>
 </span>
-{listRender}
+ {listRender}
 </div>
 );
 }
