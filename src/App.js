@@ -17,11 +17,24 @@ class App extends Component {
     return (
       <div className="grid">
         <Header className="container" >
-          <p className="clearfix text-primary"> </p>
+          <p class="clearfix "> </p>
         </Header>
-        <div className="clearfix">
+        <div class="clearfix">
           <div class="row">
-            <div class="col-6 col-md-4"><span> <a className="feature" href="#news">Go to News</a></span> <span><a className="feature" href="#cv">Go to CV</a></span></div>
+            <section >
+            <p  id="tag" class="blockquote text-center text-primary">
+            React Create App, Ejected, for node-sass Sass-loader and Babel transform-decorators for Mobx state management. 
+            <span className="text-dark mb-2">
+            React Children, Refs, Class binding and Context API. Type into page search News or CV
+            </span>
+              </p>
+              <p class="clearfix "> </p>
+              <div class="clearfix"></div>
+            </section>
+            <div class="clearfix"> </div>
+            <div class="clearfix col-6 col-md-4"><span> <a className="feature" href="#news">Go to News</a></span>
+              <span><a className="feature" href="#cv">Go to CV</a></span>
+            </div>
             <div class="col-6 col-md-4"><SearchForm /></div>
             <div class="col-6 col-md-4"> <Select className=" p-3 mb-2  dropdown-menu"
           values={["Mobx.", "State.", "Should.", "Be.", "Synchronous."]}
@@ -72,10 +85,9 @@ class App extends Component {
         <Both />
           <scroll-page id="cv" >
             <div > <h1 className="title"> This is CV </h1>
-              <p className="text-primary" >Put your feelings into it, your heart, it's your world. Now we'll take the almighty fan brush. If you didn't have baby clouds, you wouldn't have big clouds.
+              <p className="text-primary" >Put your feelings into it, your heart, it's your world. Now we'll take the almighty fan brush.
               Clouds are free. They just float around the sky all day and have fun. If we're gonna walk though the woods, we need a little path. Let's do it again then, what the heck.
-             Just go back and put one little more happy tree in there.</p> <p>Everything is happy if you choose to make it that way. There he comes.
-             Play with the angles. Now then, let's play. It just happens - whether or not you worried about it or tried to plan it.</p>
+             Just go back and put one little more happy tree in there.</p>
             </div>
           </scroll-page>
           <NewsLetter /> <input />
