@@ -1,0 +1,10 @@
+[{"name": "dashboard", "link": "/#news", "icon": "News", "sub": [
+  { "name": "Barcelona","link": "2-0", "sub": null},
+  { "name": "Real Madrid","link": "2-1", "sub": null}
+]},
+  {"name": "seo",  "link": "/#cv" ,"icon": "cv"},
+  {"name": "task", "link": "/", "icon": "Task"},
+  {"name": "hreflang", "link": "/#news" , "icon": "icon"},
+  {"name": "meta", "link": "/cv", "icon": "Meta"},
+  {"name": "message",  "link": "/news", "icon": "data"}]
+

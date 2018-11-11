@@ -1,0 +1,11 @@
+[
+  {
+    "name": "dashboard","link": "/#news","icon": "Dashbard",
+    "list": [
+      { "name": "verve", "link": "https://vervesearch.com", "icon": "Verve", "star": "\u2B50", "selected": false },
+      { "name": "search", "link": "/#news","icon": "Meta-data", "star": "\u23F3", "selected": false }
+    ]
+  },
+  { "name": "Meta-Data", "link": "/#cv", "icon": "CV",
+    "list": [{ "name": "Sub-Json","link": "/#cv", "icon": "subicon", "star": "\u2605","selected": false }] }
+]
