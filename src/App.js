@@ -12,6 +12,7 @@ import NewsLetter from './components/NewsLetter';
 import Input, { root } from './components/Input';
 import Refs from './components/Refs';
 import Select from './components/Select';
+import ButtonMenu from './components/ButtonMenu';
 const UserContext = React.createContext({});
 
 export const UserProvider = UserContext.Provider;
@@ -83,7 +84,8 @@ class App extends Component {
           }}
         >
           <User />
-        </UserProvider>
+          </UserProvider>
+          <ButtonMenu />
       </div>
           <div className="media">
             <div id="scrollUp" ></div>
